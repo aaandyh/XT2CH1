@@ -68,10 +68,10 @@ function brandstofMeter() {
             labels:['Waterstof', 'Ethanol', 'Benzine', 'Hydrazine', 'Kerosine','Methaan', 'Propeen'],
             datasets:[{
                 label:'Afstand van Falcon 9 ',
-                data:[65,59,90,81,56,55,40],
+                data:[61,87,53,65,58,57,42],
                 fill: true,
                 backgroundColor: ['orange','blue','white','red','green','grey','purple'],
-                borderColor: '#011126',
+                borderColor: 'orange',
                 pointBorderColor: '#000',
                 pointHoverBackgroundColor: '#000',
                 pointHoverBorderColor: '#00',
@@ -101,7 +101,7 @@ function raketInfo() {
     var raketChart = document.getElementById('raketInfo').getContext('2d');
 
     Chart.defaults.global.defaultFontSize = 14;
-    Chart.defaults.global.defaultFontColor = '#FFF';
+    Chart.defaults.global.defaultFontColor = 'white';
 
     var raketInfo = new Chart(raketChart, {
         type:'horizontalBar',
@@ -109,7 +109,7 @@ function raketInfo() {
             labels:['G-Force', 'Acceleratie', 'Zwaartekracht' ],
             datasets: [{
                 data: [33, 46, 53, 84, 87],
-                backgroundColor: ['blue','rgba(161, 202, 241, 0.7)','rgba(221,15,33,0.7)'],
+                backgroundColor: ['blue','grey','red'],
             }]
     },
         options:{
