@@ -1,0 +1,108 @@
+html, body{
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Helvatica', serif;
+}
+
+body{
+    background: #040447;
+}
+
+
+@font-face {
+    font-family: 'Helvetica';
+}
+
+h1, h2, h3{
+    color: white;
+    font-weight: normal;
+}
+
+h1, figure{
+    font-size: 1.2em;
+    border-bottom: 0;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.6em;
+    color: white;
+    text-align: center;
+}
+
+figure{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    width: 95%;
+    padding: 0 2% 2%;
+}
+div{
+    display: flex;
+    background: #202029;
+    opacity: 90%;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+}
+
+.cirkel{
+    min-width: 12.5rem;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 1.5rem auto;
+
+}
+.radar{
+    min-width: 12.5rem;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 1.5rem auto;
+
+}
+.info{
+    min-width: 12.5rem;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 1.5rem auto;
+}
+
+@media screen and ( min-width: 620px) {
+    html {
+        height: 100%;
+    }
+    main{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    div{
+        width: 30%;
+    }
+    .info{
+        width: 90%;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+   .cirkel .radar{
+       width: 50%;
+   }
+}
