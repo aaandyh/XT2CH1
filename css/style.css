@@ -25,13 +25,13 @@ h1, h2, h3{
 }
 
 h1, figure{
-    font-size: 1.2em;
+    font-size: 1.1em;
     border-bottom: 0;
     text-align: center;
 }
 
 h2{
-    font-size: 1.6em;
+    font-size: 1.5em;
     color: white;
     text-align: center;
 }
