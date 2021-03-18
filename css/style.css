@@ -4,11 +4,11 @@ html, body{
 }
 
 body {
+    font-family: "Helvetica";
     width: 100%;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Helvatica', serif;
 }
 
 body{
@@ -16,33 +16,39 @@ body{
 }
 
 
-@font-face {
-    font-family: 'Helvetica';
+#daglicht, #nacht, #laat{
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
 }
 
-h1, h2, h3{
+p {
+    font-weight: bold;
+    font-size: 20px;
     color: white;
-    font-weight: normal;
-}
-
-h1, figure{
-    font-size: 1.1em;
-    border-bottom: 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
 }
 
-h2{
-    font-size: 1.5em;
-    color: white;
-    text-align: center;
-}
 
-figure{
+#logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
     height: 20%;
+    text-align: center;
 }
 main{
     display: flex;
@@ -62,26 +68,60 @@ div{
 
 }
 
-.cirkel{
+.maand{
     min-width: 12.5rem;
     width: 18.75rem;
     height: 25rem;
     margin: 1.5rem auto;
 
 }
-.radar{
+.dag{
     min-width: 12.5rem;
     width: 18.75rem;
     height: 25rem;
     margin: 1.5rem auto;
+}
+
+#tijd{
+   animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+  50% {transform: rotate(360deg);}
+}
+
+#tijd, #dag, #maand {
+  animation-name: stretch;
+ animation-duration: 2.5s;
+ animation-timing-function: ease-out;
+ animation-delay: 0;
+ animation-direction: alternate;
+ animation-iteration-count: infinite;
+ animation-fill-mode: none;
+ animation-play-state: running;
+}
+
+@keyframes stretch {
+ 0% {
+   transform: scale(1);
+   border-radius: 100%;
+ }
+ 50% {
+ }
+ 100% {
+   transform: scale(1.5);
+
+ }
 
 }
-.info{
+
+.tijd{
     min-width: 12.5rem;
     width: 18.75rem;
     height: 25rem;
     margin: 1.5rem auto;
 }
+
 
 @media screen and ( min-width: 760px) {
     html {
@@ -92,23 +132,34 @@ div{
         flex-direction: row;
     }
 
+    p {
+      font-size: 35px;
+    }
+
     div{
         width: 25%;
     }
-    .info{
+    .tijd{
         width: 85%;
     }
 }
 
 
 @media screen and (min-width: 1024px) {
-   div.cirkel,  div.radar{
+   div.maand,  div.dag{
        width: 50%;
+   }
+   p {
+     font-size: 45px;
    }
 }
 
 @media screen and (min-width: 1200px) {
-   div.cirkel, div.radar{
+   div.maand, div.dag{
      width: 100%
+   }
+
+   p {
+     font-size: 55px;
    }
 }

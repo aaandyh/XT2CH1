@@ -4,27 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
     <title>SpaceX</title>
   </head>
   <body>
     <header>
       <figure>
-        <img src="img/SpaceLogo.png" alt="logo">
+        <img src="img/SpaceLogo.png" alt="logo" id="logo">
       </figure>
     </header>
 
-    <main>
-      <div class="radar">
-          <canvas id="fRadar"></canvas>
-      </div>
-      <div class="cirkel">
-          <canvas id="brandstof"></canvas>
-      </div>
-      <div class="info">
-          <canvas id="raketInfo"></canvas>
-      </div>
+    <figure>
+      <img src="img/nacht.jpeg" alt="nacht" id="nacht">
+    </figure>
 
+    <figure>
+      <img src="img/dag.jpeg" alt="dag" id="daglicht">
+    </figure>
+
+    <main>
+      <div class="dag">
+          <p id="dag"></p>
+      </div>
+      <div class="maand">
+          <p id="maand"></p>
+      </div>
+      <div class="tijd">
+          <p id="tijd"></p>
+      </div>
     </main>
     <script src="js/chart.js"></script>
   </body>
